@@ -52,6 +52,7 @@
         .weibo { background: #E6162D; }
         .douban { background: #007722; }
         .zhihu { background: #0084FF; }
+        .fanfou { background: #4C4C4C; }
 
         .theme-toggle {
             position: absolute;
@@ -80,32 +81,33 @@
 </head>
 <body class="light">
     <div class="theme-toggle" onclick="toggleTheme()">
-        <img id="theme-icon" src="sun-icon.png" alt="Toggle Theme" width="30" height="30">
+        <img id="theme-icon" src="/assets/img/moon.png" alt="Toggle Theme" width="30" height="30">
     </div>
     <div class="container">
         <img src="/assets/img/wechat.jpg" alt="Profile Picture" class="profile-pic">
         <h1>Kioto XIA</h1>
         <p>这里是你的个人简介。你可以简要介绍一下你自己，包括你的兴趣、职业、爱好等。</p>
         <div class="social-links">
-            <a href="https://twitter.com/ztshia" class="twitter">Twitter</a>
-            <a href="https://weibo.com/zhaoergou" class="weibo">微博</a>
-            <a href="https://www.douban.com/people/ztshia" class="douban">豆瓣</a>
-            <a href="https://www.zhihu.com/people/ztshia" class="zhihu">知乎</a>
+            <a href="https://twitter.com/ztshia" class="twitter" target="_blank">Twitter</a>
+            <a href="https://weibo.com/zhaoergou" class="weibo" target="_blank">微博</a>
+            <a href="https://www.douban.com/people/ztshia" class="douban" target="_blank">豆瓣</a>
+            <a href="https://www.zhihu.com/people/ztshia" class="zhihu" target="_blank">知乎</a>
+            <a href="https://fanfou.com/ztshia" class="fanfou" target="_blank">饭否</a>
         </div>
     </div>
     <div id="memos" class="memos">
         <!-- Memos Container -->
     </div>
-        <script>
+    <script>
         function toggleTheme() {
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
             if (body.classList.contains('light')) {
                 body.classList.replace('light', 'dark');
-                themeIcon.src = '/assets/img/moon.png'; // 替换为月亮图标的路径
+                themeIcon.src = '/assets/img/sun.png'; // 替换为太阳图标的路径
             } else {
                 body.classList.replace('dark', 'light');
-                themeIcon.src = '/assets/img/sun.png'; // 替换为太阳图标的路径
+                themeIcon.src = '/assets/img/moon.png'; // 替换为月亮图标的路径
             }
         }
     </script>
