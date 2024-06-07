@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艺术家页面</title>
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest/dist/lucide.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .artist-card {
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: relative;
+            font-size: 14px;
+        }
+        .artist-card img {
+            width: 100%;
+            height: auto;
+        }
+        .overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .artist-card h2 {
+            margin: 20px 0 0;
+            padding: 0 20px;
+            font-size: 24px;
+        }
+        .artist-card .listeners {
+            margin: 10px 20px 0;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #b3b3b3;
+        }
+        .artist-card .description {
+            margin: 10px 20px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #b3b3b3;
+        }
+        .artist-card .follow-btn {
+            display: block;
+            margin: 10px 20px 20px;
+            padding: 10px 0;
+            background-color: #1db954;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .artist-card .follow-btn:hover {
+            background-color: #17a74a;
+        }
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .social-media a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="artist-card">
+        <img src="artist-image.jpg" alt="孙燕姿">
+        <div class="overlay">关于艺人</div>
+        <h2>孙燕姿</h2>
+        <p class="listeners">每月有 1,181,577 名听众</p>
+        <p class="description">In year 2000 Taipei, Yanzi started her music career. Helmed by a great team, she went on to win numerous awards throughout the region, and currently has 13 full...</p>
+        <a href="#" class="follow-btn">关注</a>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" class="lucide" data-icon="facebook"><i class="lucide lucide-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" class="lucide" data-icon="twitter"><i class="lucide lucide-twitter"></i></a>
+            <a href="https://douban.com" target="_blank" class="lucide" data-icon="douban"><i class="lucide lucide-book-open"></i></a>
+            <a href="https://instagram.com" target="_blank" class="lucide" data-icon="instagram"><i class="lucide lucide-instagram"></i></a>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
