@@ -1,6 +1,7 @@
 /* 基础字体和颜色设置 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Noto Sans SC,-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
+        Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei",  "Microsoft Yahei", "Segoe UI", sans-serif, serif;
     background-color: #121212;
     color: #ffffff;
     margin: 0;
@@ -9,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 
 /* 容器样式 */
@@ -25,7 +27,8 @@ body {
     background-color: rgba(28, 28, 28, 0.8);
     border-radius: 8px;
     overflow: hidden;
-    width: 300px;
+    width: 360px;
+    max-width:100%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     position: relative;
     font-size: 14px;
@@ -75,6 +78,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     color: #b3b3b3;
+    text-align:left
 }
 
 /* 跟随按钮样式 */
