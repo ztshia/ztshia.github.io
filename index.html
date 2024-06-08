@@ -1,115 +1,84 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- 定义文档类型为HTML5，并声明字符编码为UTF-8 -->
     <meta charset="UTF-8">
+    <!-- 设置视口，确保网页在移动设备上能正确显示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 页面标题 -->
     <title>Kioto XIA</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .social-links a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            margin: 5px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .twitter { background: #1DA1F2; }
-        .weibo { background: #E6162D; }
-        .douban { background: #007722; }
-        .zhihu { background: #0084FF; }
-        .fanfou { background: #87c7fa; }
-
-        .theme-toggle {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-
-        body.light {
-            background-color: #f4f4f4;
-            color: #000;
-        }
-        body.light .container {
-            background: white;
-            color: #000;
-        }
-        body.dark {
-            background-color: #121212;
-            color: #fff;
-        }
-        body.dark .container {
-            background: #1e1e1e;
-            color: #fff;
-        }
-    </style>
+    
+    <!-- 引入Font Awesome图标库，用于显示各种图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- 引入自定义样式表 -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="light">
-    <div class="theme-toggle" onclick="toggleTheme()">
-        <img id="theme-icon" src="/assets/img/moon.png" alt="Toggle Theme" width="30" height="30">
-    </div>
+<body>
+    <!-- 页面主体容器 -->
     <div class="container">
-        <img src="/assets/img/wechat.jpg" alt="Profile Picture" class="profile-pic">
-        <h1>Kioto XIA</h1>
-        <p>这里是你的个人简介。你可以简要介绍一下你自己，包括你的兴趣、职业、爱好等。</p>
-        <div class="social-links">
-            <a href="https://twitter.com/ztshia" class="twitter" target="_blank">X</a>
-            <a href="https://weibo.com/zhaoergou" class="weibo" target="_blank">微博</a>
-            <a href="https://www.douban.com/people/ztshia" class="douban" target="_blank">豆瓣</a>
-            <a href="https://www.zhihu.com/people/ztshia" class="zhihu" target="_blank">知乎</a>
-            <a href="https://fanfou.com/ztshia" class="fanfou" target="_blank">饭否</a>
+        <!-- 艺术家卡片 -->
+        <div class="artist-card">
+            <!-- 艺术家图片 -->
+            <img src="assets/img/me.jpg" alt="孙燕姿">
+            <!-- 艺术家卡片上的覆盖层 -->
+            <div class="overlay">关于我</div>
+            <!-- 艺术家名称 -->
+            <h2>Kioto XIA</h2>
+            <!-- 艺术家职位和地点 -->
+            <p class="listeners">产品经理 @ 安徽合肥</p>
+            <!-- 艺术家简介 -->
+            <p class="description">生于九十年代初，籍贯安徽长丰，中国科学技术大学工商管理硕士，经济师，目前就职于科大讯飞，先后任职于省内多家重点互联网、运营商企业，长期从事互联网产品、运营方向工作，具备丰富的运营商、互联网行业项目产品运营、管理经验，擅长文案、设计及汇报等能力。</p>
+            <!-- 访问博客的按钮 -->
+            <a href="#" class="follow-btn">访问博客</a>
+            <!-- 社交媒体图标链接 -->
+            <div class="social-media">
+                <!-- Facebook图标链接 -->
+                <a href="https://facebook.com/ztshia" target="_blank"><i class="fab fa-facebook"></i></a>
+                <!-- Twitter图标链接 -->
+                <a href="https://x.com/ztshia" target="_blank"><i class="fab fa-twitter"></i></a>
+                <!-- Spotify图标链接 -->
+                <a href="https://www.douban.com/people/ztshia" target="_blank"><i class="fab fa-spotify"></i></a>
+                <!-- Instagram图标链接 -->
+                <a href="https://instagram.com/ztshia" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- 引用部分 -->
+        <div class="quote">
+            <!-- 备忘录容器 -->
+            <div id="memos" class="memos">
+                <!-- Memos Container -->
+            </div>
         </div>
     </div>
-    <div id="memos" class="memos">
-        <!-- Memos Container -->
-    </div>
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById('theme-icon');
-            if (body.classList.contains('light')) {
-                body.classList.replace('light', 'dark');
-                themeIcon.src = '/assets/img/sun.png'; // 替换为太阳图标的路径
-            } else {
-                body.classList.replace('dark', 'light');
-                themeIcon.src = '/assets/img/moon.png'; // 替换为月亮图标的路径
-            }
+
+    <!-- Your Memos API -->
+    <!-- 这段代码用于配置Memos API，用于展示备忘录内容 -->
+    <script type="text/javascript">
+        var memos = {
+            host: 'https://live.upstairs.cn:9999/',   // Your Memos API的主机地址
+            limit: '1',   // 显示的备忘录数量
+            creatorId: '101',   // 创建者的ID
+            domId: '#memos',   // 备忘录容器的ID
+            username: 'ztshia',   // 用户名
+            name: 'Kioto',   // 显示的名称
         }
     </script>
+    <!-- 引入其他JavaScript库 -->
+    <!-- 这些库用于实现懒加载图片、Markdown解析、图片查看器、时间处理、音乐播放器、代码高亮等功能 -->
+    <script type="text/javascript" src="assets/js/lazyload.min.js?v=17.8.3"></script>
+    <script type="text/javascript" src="assets/js/marked.min.js?v=4.2.2"></script>
+    <script type="text/javascript" src="assets/js/view-image.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/pangu.min.js?v=4.0.7"></script> -->
+    <script type="text/javascript" src="assets/js/moment.min.js?v=2.29.4"></script>
+    <script type="text/javascript" src="assets/js/moment.twitter.js"></script>
+    <script type="text/javascript" src="assets/js/APlayer.min.js"></script>
+    <script type="text/javascript" src="assets/js/Meting.min.js"></script>
+    <script type="text/javascript" src="assets/js/highlight.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="assets/js/baidu.js"></script>
+    <!-- 高亮代码块 -->
+    <script>hljs.highlightAll();</script>
 </body>
 </html>

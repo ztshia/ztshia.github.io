@@ -25,7 +25,7 @@
             width: 90%;
             max-width: 1200px;
         }
-        .artist-card {
+        .card {
             background-color: rgba(28, 28, 28, 0.8);
             border-radius: 8px;
             overflow: hidden;
@@ -34,13 +34,14 @@
             position: relative;
             font-size: 14px;
             transition: transform 0.3s ease, background-color 0.3s ease;
+            margin: 10px;
         }
-        .artist-card img {
+        .card img {
             width: 100%;
             height: auto;
             transition: opacity 0.3s ease;
         }
-        .artist-card:hover img {
+        .card:hover img {
             opacity: 0.3;
         }
         .overlay {
@@ -51,24 +52,24 @@
             font-size: 16px;
             font-weight: bold;
         }
-        .artist-card h2 {
+        .card h2 {
             margin: 20px 0 0;
             padding: 0 20px;
             font-size: 24px;
         }
-        .artist-card .listeners {
+        .card .listeners {
             margin: 10px 20px 0;
             font-size: 14px;
             line-height: 1.5;
             color: #b3b3b3;
         }
-        .artist-card .description {
+        .card .description {
             margin: 10px 20px;
             font-size: 14px;
             line-height: 1.5;
             color: #b3b3b3;
         }
-        .artist-card .follow-btn {
+        .card .follow-btn {
             display: block;
             margin: 10px 20px 20px;
             padding: 10px 0;
@@ -79,7 +80,7 @@
             text-align: center;
             transition: background-color 0.3s;
         }
-        .artist-card .follow-btn:hover {
+        .card .follow-btn:hover {
             background-color: #17a74a;
         }
         .social-media {
@@ -106,6 +107,9 @@
             align-items: flex-start;
             position: relative;
             max-width: 640px;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
         }
         .quote::before {
             content: '';
@@ -115,15 +119,26 @@
             display: inline-block;
             margin: 0;
         }
+        .quote::after {
+            content: '——Memo Pieces';
+            display: block;
+            font-size: 18px;
+            font-weight: normal;
+            margin-top: 10px;
+            color: #b3b3b3;
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+        }
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-            .quote {
-                margin-top: 2em;
-                align-items: left;
+            .card, .quote {
+                width: 100%;
+                margin: 10px 0;
             }
         }
         .memos {
@@ -135,8 +150,12 @@
             list-style-type: none;
             padding-left: 0;
         }
-
-        .memos__meta{text-align: right;font-size:20px;font-weight:400;color:#ddd;}
+        .memos__meta {
+            text-align: right;
+            font-size: 20px;
+            font-weight: 400;
+            color: #ddd;
+        }
         .load-btn.button-load, .tag-span, .resource-wrapper, .memos__userinfo {
             display: none;
         }
@@ -148,13 +167,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="artist-card">
+        <div class="card artist-card">
             <img src="assets/img/me.jpg" alt="孙燕姿">
             <div class="overlay">关于我</div>
             <h2>Kioto XIA</h2>
             <p class="listeners">产品经理 @ 安徽合肥</p>
             <p class="description">生于九十年代初，籍贯安徽长丰，中国科学技术大学工商管理硕士，经济师，目前就职于科大讯飞，先后任职于省内多家重点互联网、运营商企业，长期从事互联网产品、运营方向工作，具备丰富的运营商、互联网行业项目产品运营、管理经验，擅长文案、设计及汇报等能力。
-                .</p>
+            </p>
             <a href="#" class="follow-btn">访问博客</a>
             <div class="social-media">
                 <a href="https://facebook.com/ztshia" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -163,7 +182,7 @@
                 <a href="https://instagram.com/ztshia" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <div class="quote">
+        <div class="card quote">
             <div id="memos" class="memos">
                 <!-- Memos Container -->
             </div>
@@ -180,6 +199,25 @@
             username: 'ztshia',  // You can customize the display ID that is not related to memos.
             name: 'Kioto',  // You can customize the displayed full name, that is not related to memos.
         }
+
+        // Function to fetch the memo data and set the background image
+        async function fetchMemoData() {
+            try {
+                const response = await fetch(`${memos.host}api/memo?creatorId=${memos.creatorId}&limit=${memos.limit}`);
+                const data = await response.json();
+                if (data.data.length > 0) {
+                    const imageUrl = data.data[0].resourceList[0]?.externalLink || data.data[0].resourceList[0]?.url;
+                    if (imageUrl) {
+                        document.querySelector('.quote').style.backgroundImage = `url(${imageUrl})`;
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching memo data:', error);
+            }
+        }
+
+        // Fetch the memo data when the page loads
+        window.onload = fetchMemoData;
     </script>
     <script type="text/javascript" src="assets/js/lazyload.min.js?v=17.8.3"></script>
     <script type="text/javascript" src="assets/js/marked.min.js?v=4.2.2"></script>
@@ -189,10 +227,4 @@
     <script type="text/javascript" src="assets/js/moment.twitter.js"></script>
     <script type="text/javascript" src="assets/js/APlayer.min.js"></script>
     <script type="text/javascript" src="assets/js/Meting.min.js"></script>
-    <script type="text/javascript" src="assets/js/highlight.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/baidu.js"></script>
-    <script>hljs.highlightAll();</script>
-</body>
-</html>
+    <script type="
