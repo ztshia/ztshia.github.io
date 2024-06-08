@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>艺术家页面</title>
-    <link rel="stylesheet" href="https://unpkg.com/lucide@latest/dist/lucide.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,18 +18,30 @@
             align-items: center;
             height: 100vh;
         }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+        }
         .artist-card {
-            background-color: #1c1c1c;
+            background-color: rgba(28, 28, 28, 0.8);
             border-radius: 8px;
             overflow: hidden;
             width: 300px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             position: relative;
             font-size: 14px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .artist-card img {
             width: 100%;
             height: auto;
+            transition: opacity 0.3s ease;
+        }
+        .artist-card:hover img {
+            opacity: 0.3;
         }
         .overlay {
             position: absolute;
@@ -79,31 +91,115 @@
         .social-media a {
             color: #b3b3b3;
             text-decoration: none;
-            font-size: 24px;
+            font-size: 20px;
             transition: color 0.3s;
         }
         .social-media a:hover {
             color: #fff;
         }
+        .quote {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+        }
+        .quote::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-image: url(https://cdn.upstairs.cn/blockquote.svg);
+            display: inline-block;
+            margin: 0;
+        }
+        .quote::after {
+            content: '——Memo Pieces';
+            display: block;
+            font-size: 18px;
+            font-weight: normal;
+            margin-top: 10px;
+            color: #b3b3b3;
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .quote {
+                margin-top: 2em;
+                align-items: left;
+            }
+        }
+        .memos {
+            margin-bottom:0.5em;
+            width: 100%;
+            font-weight: 1000;
+        }
+        .memos ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .load-btn.button-load, .tag-span, .resource-wrapper, .memos__userinfo {
+            display: none;
+        }
+        .quote ul {
+            list-style-type: none;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
-    <div class="artist-card">
-        <img src="artist-image.jpg" alt="孙燕姿">
-        <div class="overlay">关于艺人</div>
-        <h2>孙燕姿</h2>
-        <p class="listeners">每月有 1,181,577 名听众</p>
-        <p class="description">In year 2000 Taipei, Yanzi started her music career. Helmed by a great team, she went on to win numerous awards throughout the region, and currently has 13 full...</p>
-        <a href="#" class="follow-btn">关注</a>
-        <div class="social-media">
-            <a href="https://facebook.com" target="_blank" class="lucide" data-icon="facebook"><i class="lucide lucide-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank" class="lucide" data-icon="twitter"><i class="lucide lucide-twitter"></i></a>
-            <a href="https://douban.com" target="_blank" class="lucide" data-icon="douban"><i class="lucide lucide-book-open"></i></a>
-            <a href="https://instagram.com" target="_blank" class="lucide" data-icon="instagram"><i class="lucide lucide-instagram"></i></a>
+    <div class="container">
+        <div class="artist-card">
+            <img src="artist-image.jpg" alt="孙燕姿">
+            <div class="overlay">关于艺人</div>
+            <h2>孙燕姿</h2>
+            <p class="listeners">每月有 1,181,577 名听众</p>
+            <p class="description">In year 2000 Taipei, Yanzi started her music career. Helmed by a great team, she went on to win numerous awards throughout the region, and currently has 13 full...</p>
+            <a href="#" class="follow-btn">关注</a>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://douban.com" target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="quote">
+            <div id="memos" class="memos">
+                <!-- Memos Container -->
+            </div>
         </div>
     </div>
-    <script>
-        lucide.createIcons();
+
+    <!-- Your Memos API -->
+    <script type="text/javascript">
+        var memos = {
+            host: 'https://life.upstairs.cn/',  // Your Memos, with '/' end.
+            limit: '1',  // Pagination to show.
+            creatorId: '101',  // The old instance is 101, and the new instance is 1. 
+            domId: '#memos',  // Default #memos.
+            username: 'ztshia',  // You can customize the display ID that is not related to memos.
+            name: 'Kioto',  // You can customize the displayed full name, that is not related to memos.
+        }
     </script>
+    <script type="text/javascript" src="assets/js/lazyload.min.js?v=17.8.3"></script>
+    <script type="text/javascript" src="assets/js/marked.min.js?v=4.2.2"></script>
+    <script type="text/javascript" src="assets/js/view-image.min.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/pangu.min.js?v=4.0.7"></script> -->
+    <script type="text/javascript" src="assets/js/moment.min.js?v=2.29.4"></script>
+    <script type="text/javascript" src="assets/js/moment.twitter.js"></script>
+    <script type="text/javascript" src="assets/js/APlayer.min.js"></script>
+    <script type="text/javascript" src="assets/js/Meting.min.js"></script>
+    <script type="text/javascript" src="assets/js/highlight.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+    <script type="text/javascript" src="assets/js/baidu.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
