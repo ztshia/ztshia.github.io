@@ -1,0 +1,179 @@
+/* 基础字体和颜色设置 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 容器样式 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* 艺术家卡片样式 */
+.artist-card {
+    background-color: rgba(28, 28, 28, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    font-size: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 图片样式 */
+.artist-card img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* 图片悬停效果 */
+.artist-card:hover img {
+    opacity: 0.3;
+}
+
+/* 覆盖层样式 */
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 标题样式 */
+.artist-card h2 {
+    margin: 20px 0 0;
+    padding: 0 20px;
+    font-size: 24px;
+}
+
+/* 听众数量和描述样式 */
+.artist-card .listeners {
+    margin: 10px 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b3b3b3;
+}
+
+/* 描述样式 */
+.artist-card .description {
+    margin: 10px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b3b3b3;
+}
+
+/* 跟随按钮样式 */
+.artist-card .follow-btn {
+    display: block;
+    margin: 10px 20px 20px;
+    padding: 10px 0;
+    background-color: #1db954;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+/* 鼠标悬浮效果 */
+.artist-card .follow-btn:hover {
+    background-color: #17a74a;
+}
+
+/* 社交媒体图标样式 */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* 社交媒体图标样式 */
+.social-media a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+/* 鼠标悬浮效果 */
+.social-media a:hover {
+    color: #fff;
+}
+
+/* 引用样式 */
+.quote {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    max-width: 640px;
+}
+
+/* 引用样式 */
+.quote::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-image: url(https://cdn.upstairs.cn/blockquote.svg);
+    display: inline-block;
+    margin: 0;
+}
+
+/* 响应式布局 - 小屏幕设备 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .quote {
+        margin-top: 2em;
+        align-items: left;
+    }
+}
+
+/* 笔记样式 */
+.memos {
+    margin-bottom:0.5em;
+    width: 100%;
+    font-weight: 1000;
+}
+
+/* 笔记列表样式 */
+.memos ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* 笔记元数据样式 */
+.memos__meta{text-align: right;font-size:20px;font-weight:400;color:#ddd;}
+
+/* 隐藏元素 */
+.load-btn.button-load, .tag-span, .resource-wrapper, .memos__userinfo {
+    display: none;
+}
+
+/* 笔记列表项样式 */
+.quote ul {
+    list-style-type: none;
+    text-align: left;
+}
