@@ -105,6 +105,7 @@
             flex-direction: column;
             align-items: flex-start;
             position: relative;
+            max-width: 640px;
         }
         .quote::before {
             content: '';
@@ -113,17 +114,6 @@
             background-image: url(https://cdn.upstairs.cn/blockquote.svg);
             display: inline-block;
             margin: 0;
-        }
-        .quote::after {
-            content: '——Memo Pieces';
-            display: block;
-            font-size: 18px;
-            font-weight: normal;
-            margin-top: 10px;
-            color: #b3b3b3;
-            position: absolute;
-            right: 20px;
-            bottom: 0;
         }
         @media (max-width: 768px) {
             .container {
@@ -145,6 +135,8 @@
             list-style-type: none;
             padding-left: 0;
         }
+
+        .memos__meta{text-align: right;font-size:20px;font-weight:400;color:#ddd;}
         .load-btn.button-load, .tag-span, .resource-wrapper, .memos__userinfo {
             display: none;
         }
@@ -180,9 +172,9 @@
     <!-- Your Memos API -->
     <script type="text/javascript">
         var memos = {
-            host: 'https://life.upstairs.cn/',  // Your Memos, with '/' end.
+            host: 'http://10.1.1.8:5229/',  // Your Memos, with '/' end.
             limit: '1',  // Pagination to show.
-            creatorId: '101',  // The old instance is 101, and the new instance is 1. 
+            creatorId: '1',  // The old instance is 101, and the new instance is 1. 
             domId: '#memos',  // Default #memos.
             username: 'ztshia',  // You can customize the display ID that is not related to memos.
             name: 'Kioto',  // You can customize the displayed full name, that is not related to memos.
