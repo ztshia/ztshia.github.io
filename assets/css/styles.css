@@ -1,7 +1,5 @@
-/* 基础字体和颜色设置 */
 body {
-    font-family: Noto Sans SC,-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
-        Arial, "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei",  "Microsoft Yahei", "Segoe UI", sans-serif, serif;
+    font-family: Arial, sans-serif;
     background-color: #121212;
     color: #ffffff;
     margin: 0;
@@ -10,78 +8,58 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
-
-/* 容器样式 */
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     width: 90%;
     max-width: 1200px;
 }
-
-/* 艺术家卡片样式 */
-.artist-card {
+.artist-card, .quote {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(28, 28, 28, 0.8);
     border-radius: 8px;
     overflow: hidden;
     width: 360px;
-    max-width:100%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    position: relative;
-    font-size: 14px;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative; /* Added position relative */
 }
-
-/* 图片样式 */
 .artist-card img {
     width: 100%;
     height: auto;
     transition: opacity 0.3s ease;
 }
-
-/* 图片悬停效果 */
 .artist-card:hover img {
     opacity: 0.3;
 }
-
-/* 覆盖层样式 */
 .overlay {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 10px; /* Adjusted top position */
+    left: 10px; /* Adjusted left position */
     color: white;
     font-size: 16px;
     font-weight: bold;
 }
-
-/* 标题样式 */
 .artist-card h2 {
     margin: 20px 0 0;
     padding: 0 20px;
     font-size: 24px;
 }
-
-/* 听众数量和描述样式 */
 .artist-card .listeners {
     margin: 10px 20px 0;
     font-size: 14px;
     line-height: 1.5;
     color: #b3b3b3;
 }
-
-/* 描述样式 */
 .artist-card .description {
     margin: 10px 20px;
     font-size: 14px;
     line-height: 1.5;
     color: #b3b3b3;
-    text-align:left
 }
-
-/* 跟随按钮样式 */
 .artist-card .follow-btn {
     display: block;
     margin: 10px 20px 20px;
@@ -93,56 +71,58 @@ body {
     text-align: center;
     transition: background-color 0.3s;
 }
-
-/* 鼠标悬浮效果 */
 .artist-card .follow-btn:hover {
     background-color: #17a74a;
 }
-
-/* 社交媒体图标样式 */
 .social-media {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 20px;
 }
-
-/* 社交媒体图标样式 */
 .social-media a {
     color: #b3b3b3;
     text-decoration: none;
     font-size: 20px;
     transition: color 0.3s;
 }
-
-/* 鼠标悬浮效果 */
 .social-media a:hover {
     color: #fff;
 }
-
-/* 引用样式 */
 .quote {
+    position: relative;
     font-size: 24px;
     font-weight: bold;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin: 0 30px;
+    padding: 20px;
+    color: #fff;
+    background-size: 110%; /* Zoom in on the background image */
+    background-position: top; /* Show the top 80% of the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    flex-grow: 1;
+}
+.memos::before {
+content: '';
+width: 30px;
+height: 30px;
+background-image: url(../assets/img/quote.png);
+display: inline-block;
+margin: 0;
+}
+#memos {
+    z-index: 1;
     position: relative;
-    max-width: 640px;
 }
-
-/* 引用样式 */
-.quote::before {
-    content: '';
-    width: 30px;
-    height: 30px;
-    background-image: url(https://cdn.upstairs.cn/blockquote.svg);
-    display: inline-block;
-    margin: 0;
+.quote-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    z-index: 0;
 }
-
-/* 响应式布局 - 小屏幕设备 */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -150,34 +130,23 @@ body {
         text-align: center;
     }
     .quote {
-        margin-top: 2em;
-        align-items: left;
+        margin-top: 20px;
+        align-items: center;
     }
 }
-
-/* 笔记样式 */
 .memos {
-    margin-bottom:0.5em;
+    margin-top: 0px;
     width: 100%;
-    font-weight: 1000;
 }
-
-/* 笔记列表样式 */
+.memos p{margin:5px 0}
+.memos__meta{font-size:16px;}
 .memos ul {
     list-style-type: none;
     padding-left: 0;
 }
-
-/* 笔记元数据样式 */
-.memos__meta{text-align: right;font-size:20px;font-weight:400;color:#ddd;}
-
-/* 隐藏元素 */
 .load-btn.button-load, .tag-span, .resource-wrapper, .memos__userinfo {
     display: none;
 }
-
-/* 笔记列表项样式 */
 .quote ul {
     list-style-type: none;
-    text-align: left;
 }
