@@ -105,7 +105,7 @@ body {
 content: '';
 width: 30px;
 height: 30px;
-background-image: url(../assets/img/quote.png);
+background-image: url(https://cdn.upstairs.cn/quote.png);
 display: inline-block;
 margin: 0;
 }
