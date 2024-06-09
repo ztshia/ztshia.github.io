@@ -175,8 +175,8 @@ body {
         align-items: center; /* 文本居中对齐 */
         text-align: center; /* 文本居中对齐 */
         width:100%;
-    .artist-card{width:360px}
-    }
+        }
+        .artist-card{width:360px}
     .quote {
         width:320px;
         margin-top: 30px; /* 引用部分在垂直方向上居顶 */
