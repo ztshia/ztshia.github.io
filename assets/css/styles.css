@@ -123,6 +123,9 @@ body {
     color: #fff; /* 改变文字颜色 */
 }
 
+.icon{width:20px;height:20px;fill:#b3b3b3;}
+.icon:hover{width:20px;height:20px;fill:#fff;}
+
 /* 设置引用部分的样式 */
 .quote {
     position: relative; /* 设置相对定位 */
