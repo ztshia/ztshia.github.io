@@ -82,11 +82,14 @@
             .then(data => {
                 if (data && data.data && data.data.length > 0) {
                     var memo = data.data[0];
-                    
-                    var imageUrl = memo.resourceList && memo.resourceList.length > 0 ? memo.resourceList[0].externalLink : '';
+                    var resourceList = memo.resourceList;
 
-                    if (imageUrl) {
-                        document.querySelector('.quote').style.backgroundImage = `url(${imageUrl})`;
+                    if (resourceList && resourceList.length > 0) {
+                        // 随机选择一张图片
+                        var randomImage = resourceList[Math.floor(Math.random() * resourceList.length)].externalLink;
+                        if (randomImage) {
+                            document.querySelector('.quote').style.backgroundImage = `url(${randomImage})`;
+                        }
                     }
 
                     var contentElement = document.getElementById('memos');
