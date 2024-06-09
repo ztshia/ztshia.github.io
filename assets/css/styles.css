@@ -59,6 +59,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     color: #b3b3b3;
+    text-align:left;
 }
 .artist-card .follow-btn {
     display: block;
@@ -136,9 +137,11 @@ margin: 0;
 }
 .memos {
     margin-top: 0px;
+    text-align:left;
     width: 100%;
 }
-.memos p{margin:5px 0}
+.memos p{margin:6px 0;}
+.memos__content{margin-top:-25px;}
 .memos__meta{font-size:16px;}
 .memos ul {
     list-style-type: none;
