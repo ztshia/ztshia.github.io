@@ -50,6 +50,7 @@ var holidays = {
 
     // 添加更多假期
 };
+
 // moment.js twitter plugin
 (function () {
     var day, formats, hour, initialize, minute, second, week;
@@ -97,7 +98,11 @@ var holidays = {
                 unit = 'minutes';
             } else if (diff < day) {
                 unit = 'hours';
-            } else if (diff < week && !holiday) {
+            } else if (diff < 2 * day) {
+                return '昨天' + (holiday ? ' · ' + holiday : '');
+            } else if (diff < 3 * day) {
+                return '前天' + (holiday ? ' · ' + holiday : '');
+            } else if (diff < week) {
                 unit = 'days';
             } else {
                 if (this.year() == year) {
