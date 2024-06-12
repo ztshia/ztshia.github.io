@@ -166,7 +166,7 @@ body {
     background: rgba(0, 0, 0, 0.4); /* 设置背景颜色 */
     border-radius: 8px; /* 设置边框圆角 */
     z-index: 0; /* 设置z-index */
-    ;transition:1s;
+    transition:1s;
 }
 .quote-overlay:hover{
     background: rgba(0, 0, 0, 0.2);
