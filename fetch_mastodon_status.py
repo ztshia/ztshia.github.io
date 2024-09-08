@@ -4,7 +4,7 @@ import requests
 
 MASTODON_BASE_URL = "https://ustc.mba"
 MASTODON_ACCESS_TOKEN = os.getenv("MASTODON_ACCESS_TOKEN")
-MASTODON_USERNAME = os.getenv("MASTODON_USERNAME") 
+MASTODON_USERNAME = os.getenv("MASTODON_USERNAME")
 LAST_FETCHED_ID_FILE = "last_fetched_id.txt"
 STATUS_FILE = "status.json"
 IMG_FOLDER = "img"
