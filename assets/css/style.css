@@ -590,6 +590,7 @@ blockquote {
     .load-btn {
         margin-left: 0;
     }
+    .new{display:none;}
 }
 
 .video-wrapper {
@@ -624,3 +625,6 @@ footer img{height:10px}
 .filter{
 	display:none;
 }
+
+.new  {position:absolute;right:15px;top:10px}
+.new a{;color:rgb(22,163,74);text-decoration:none;font-size:14px;}
