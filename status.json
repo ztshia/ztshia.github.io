@@ -1,5 +1,108 @@
 [
     {
+        "id": "113113927923192830",
+        "created_at": "2024-09-10T15:19:26.211Z",
+        "in_reply_to_id": null,
+        "in_reply_to_account_id": null,
+        "sensitive": false,
+        "spoiler_text": "",
+        "visibility": "public",
+        "language": "zh-CN",
+        "uri": "https://ustc.mba/users/x/statuses/113113927923192830",
+        "url": "https://ustc.mba/@x/113113927923192830",
+        "replies_count": 0,
+        "reblogs_count": 0,
+        "favourites_count": 0,
+        "edited_at": null,
+        "favourited": false,
+        "reblogged": false,
+        "muted": false,
+        "bookmarked": false,
+        "pinned": false,
+        "content": "<p>当2016年4月华为发布第一部带有后置双摄像头的手机华为P9时，所有人都惊呼，「卧槽，原来手机还可以有2个镜头？多个镜头有什么用，不就是为了多挣点钱吗！一个摄像头够用了」尔后包括苹果在内的所有的旗舰手机逐渐将后置双摄、三摄成为标配，大家才觉得理所当然。</p><p>来到2016年下半年，当苹果发布第一代AirPods时，许多人又惊呼，「一个小耳机凭什么卖这么贵」，并配上有线耳机EarPods剪掉耳机线的照片加以嘲讽。那会没人相信以后的耳机就长这个样子，更没人相信国产漫步者和华强北们能将这种耳机打到一两百元以内。</p><p>同样的，今天很多人还在都在感叹「华为的三折屏有什么用，反正自己不会用，太贵了只有高端商务人士才会用吧」，可是假如未来三折屏手机像三摄镜头手机和无线耳机一样普及，只有千元的时候，你会不会考虑一台呢？</p><p>现在看来，科森科技还是一个华为概念股，但是实际上，作为铰链技术的关键供应商，科森是面向整个手机行业的，或许不会成为三折屏手机行业的宁德时代，但对标欧菲光、歌尔股份是完全合理的。</p>",
+        "filtered": [],
+        "reblog": null,
+        "application": {
+            "name": "Web",
+            "website": null
+        },
+        "account": {
+            "id": "113063808317149320",
+            "username": "x",
+            "acct": "x",
+            "display_name": "Kioto",
+            "locked": false,
+            "bot": false,
+            "discoverable": null,
+            "group": false,
+            "created_at": "2024-09-01T00:00:00.000Z",
+            "note": "<p>著名晨间剧表演艺术家、国家一级演员新垣结衣女士的配偶。</p>",
+            "url": "https://ustc.mba/@x",
+            "uri": "https://ustc.mba/users/x",
+            "avatar": "https://ustc.mba/system/accounts/avatars/113/063/808/317/149/320/original/a124ae01cd6195ba.jpg",
+            "avatar_static": "https://ustc.mba/system/accounts/avatars/113/063/808/317/149/320/original/a124ae01cd6195ba.jpg",
+            "header": "https://ustc.mba/system/accounts/headers/113/063/808/317/149/320/original/26059eadae9321b5.jpeg",
+            "header_static": "https://ustc.mba/system/accounts/headers/113/063/808/317/149/320/original/26059eadae9321b5.jpeg",
+            "followers_count": 1,
+            "following_count": 2,
+            "statuses_count": 15,
+            "last_status_at": "2024-09-10",
+            "noindex": false,
+            "emojis": [],
+            "roles": [
+                {
+                    "id": "3",
+                    "name": "Owner",
+                    "color": ""
+                }
+            ],
+            "fields": [
+                {
+                    "name": "个人网站",
+                    "value": "<a href=\"https://about.upstairs.cn\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">about.upstairs.cn</span><span class=\"invisible\"></span></a>",
+                    "verified_at": null
+                },
+                {
+                    "name": "IP属地",
+                    "value": "安徽",
+                    "verified_at": null
+                }
+            ]
+        },
+        "media_attachments": [
+            {
+                "id": "113113926846168495",
+                "type": "image",
+                "url": "https://ustc.mba/system/media_attachments/files/113/113/926/846/168/495/original/e65c3f29aa1a450a.png",
+                "preview_url": "https://ustc.mba/system/media_attachments/files/113/113/926/846/168/495/small/e65c3f29aa1a450a.png",
+                "remote_url": null,
+                "preview_remote_url": null,
+                "text_url": null,
+                "meta": {
+                    "original": {
+                        "width": 1220,
+                        "height": 1220,
+                        "size": "1220x1220",
+                        "aspect": 1.0
+                    },
+                    "small": {
+                        "width": 480,
+                        "height": 480,
+                        "size": "480x480",
+                        "aspect": 1.0
+                    }
+                },
+                "description": null,
+                "blurhash": "U25Ey,t7of%MR:-;ofM{00Ioj[ITM^D$M{xv"
+            }
+        ],
+        "mentions": [],
+        "tags": [],
+        "emojis": [],
+        "card": null,
+        "poll": null
+    },
+    {
         "id": "113111980136462622",
         "created_at": "2024-09-10T07:04:05.344Z",
         "in_reply_to_id": null,
