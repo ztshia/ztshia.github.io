@@ -1,5 +1,5 @@
 let postsData = [];
-let currentDisplayCount = 0;
+let currentDisplayCount = 30;
 const increment = 30;
 
 document.addEventListener('DOMContentLoaded', () => {
