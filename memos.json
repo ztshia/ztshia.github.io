@@ -1,5 +1,16 @@
 [
     {
+        "created_at": "2024-09-15T11:05:54.592Z",
+        "url": "https://ustc.mba/@x/113141242566494956",
+        "content": "<p>发现，MetaText上传图片是会压缩到 1280 像素，而Mammoth则是上传原图。（1280完全够了</p>",
+        "application": {
+            "name": "Metatext",
+            "website": "https://metabolist.org/metatext"
+        },
+        "media_attachments": [],
+        "tags": []
+    },
+    {
         "created_at": "2024-09-14T08:24:56.268Z",
         "url": "https://ustc.mba/@x/113134947288156179",
         "content": "<p>生活破破烂烂，再穷也要吃饭。</p>",
