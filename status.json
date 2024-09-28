@@ -1,5 +1,87 @@
 [
     {
+        "id": "113215548226687631",
+        "created_at": "2024-09-28T14:02:48.987Z",
+        "in_reply_to_id": null,
+        "in_reply_to_account_id": null,
+        "sensitive": false,
+        "spoiler_text": "",
+        "visibility": "public",
+        "language": "zh",
+        "uri": "https://ustc.mba/users/x/statuses/113215548226687631",
+        "url": "https://ustc.mba/@x/113215548226687631",
+        "replies_count": 0,
+        "reblogs_count": 0,
+        "favourites_count": 0,
+        "edited_at": null,
+        "favourited": false,
+        "reblogged": false,
+        "muted": false,
+        "bookmarked": false,
+        "pinned": false,
+        "content": "<p>想了下，后面该配置科创板和AI，白酒已经涨差不多了，银行已经涨到顶了，如果想突破3700，后面还是只有科技股才会有上涨空间。新能源锂电光伏也会有一定的回归。</p>",
+        "filtered": [],
+        "reblog": null,
+        "application": {
+            "name": "Metatext",
+            "website": "https://metabolist.org/metatext"
+        },
+        "account": {
+            "id": "113063808317149320",
+            "username": "x",
+            "acct": "x",
+            "display_name": "Kioto",
+            "locked": false,
+            "bot": false,
+            "discoverable": true,
+            "group": false,
+            "created_at": "2024-09-01T00:00:00.000Z",
+            "note": "<p>著名晨间剧表演艺术家、国家一级演员新垣结衣女士的配偶。</p>",
+            "url": "https://ustc.mba/@x",
+            "uri": "https://ustc.mba/users/x",
+            "avatar": "https://ustc.mba/system/accounts/avatars/113/063/808/317/149/320/original/a124ae01cd6195ba.jpg",
+            "avatar_static": "https://ustc.mba/system/accounts/avatars/113/063/808/317/149/320/original/a124ae01cd6195ba.jpg",
+            "header": "https://ustc.mba/system/accounts/headers/113/063/808/317/149/320/original/26059eadae9321b5.jpeg",
+            "header_static": "https://ustc.mba/system/accounts/headers/113/063/808/317/149/320/original/26059eadae9321b5.jpeg",
+            "followers_count": 1,
+            "following_count": 7,
+            "statuses_count": 40,
+            "last_status_at": "2024-09-28",
+            "noindex": false,
+            "emojis": [],
+            "roles": [
+                {
+                    "id": "3",
+                    "name": "Owner",
+                    "color": ""
+                }
+            ],
+            "fields": [
+                {
+                    "name": "个人网站",
+                    "value": "<a href=\"https://about.upstairs.cn\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">about.upstairs.cn</span><span class=\"invisible\"></span></a>",
+                    "verified_at": null
+                },
+                {
+                    "name": "备份站点",
+                    "value": "<a href=\"https://x.ustc.mba\" target=\"_blank\" rel=\"nofollow noopener noreferrer me\" translate=\"no\"><span class=\"invisible\">https://</span><span class=\"\">x.ustc.mba</span><span class=\"invisible\"></span></a>",
+                    "verified_at": null
+                },
+                {
+                    "name": "IP属地",
+                    "value": "安徽",
+                    "verified_at": null
+                }
+            ]
+        },
+        "media_attachments": [],
+        "mentions": [],
+        "tags": [],
+        "emojis": [],
+        "card": null,
+        "poll": null
+    },
+    {
         "id": "113213042367562647",
         "created_at": "2024-09-28T03:25:32.611Z",
         "in_reply_to_id": null,
