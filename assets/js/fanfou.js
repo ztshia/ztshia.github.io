@@ -56,7 +56,7 @@ function loadMore() {
         // 插入日期和来源信息
         postHTML += `
             <div class="date">
-                <a href="${post.url}" target="_blank">${moment(post.created_at).fromNow()}</a> 来自<a href="${post.application.website || '#'}" target="_blank"> ${post.application.name}</a>
+                <a href="${post.url}" target="_blank">${moment(post.created_at).twitter()}</a> 来自<a href="${post.application.website || '#'}" target="_blank"> ${post.application.name}</a>
             </div>
         `;
 
