@@ -13,7 +13,7 @@ def generate_memos(input_file, output_file):
             "application": status.get("application"),
             "media_attachments": [
                 {
-                    "url": f"https://statics.upstairs.cn/status/{attachment.get('id')}.jpg",
+                    "url": f"https://img.upstairs.cn/status/{attachment.get('id')}.jpg",
                     "preview_url": attachment.get("preview_url"),
                 } for attachment in status.get("media_attachments", [])
             ],
