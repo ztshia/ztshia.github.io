@@ -43,6 +43,7 @@ html {
 .name {
     margin: 0;
     font-size: 24px;
+    font-weight:1000;
 }
 
 .handle,
@@ -50,13 +51,6 @@ html {
 .join-date {
     color: #777;
     margin: 5px 0;
-}
-
-.stats {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 /* 定义标签页按钮的样式 */
